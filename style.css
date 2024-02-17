@@ -1,0 +1,190 @@
+/* ---- Estilos basicos ---------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font: 70%/160% "verdana", sans-serif;
+    background: #181a1b;
+    color: #e8e6e3;
+}
+
+a {
+    color:#37bbf2;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#fff;
+}
+  
+p {
+    margin: 1em 0;
+    padding: 0;
+}
+  
+.clear {
+    clear: both;
+}
+  
+h1, h2, h3, h4, h5 {
+    margin: 1em 0;
+    padding:0;
+}
+  
+h1 {
+    font-size: 300%;
+    font-family: "Kode Mono", monospace;
+    font-weight: 400;
+}
+  
+h2 {
+    font-size:170%;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+}
+  
+h3 {
+    font-size:120%;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+}
+  
+ul, ol {
+    margin: 1em 0 1em 2em;
+    padding-left: 8px;
+    list-style: none;
+}
+
+/* ---- Layout ------------------------------------------------------------- */
+#contenedor, #cabecera, #contenido, #secundario {
+    display: flex;
+}
+
+#contenedor {
+    flex-direction: column;
+}
+
+#cabecera {
+    align-items: center;
+    height: 55px;
+    padding: 10px 20px;
+    background: #000;
+}
+
+#contenido #secundario {
+    flex-direction: column;
+    background: #0C0D0E;
+    padding: 0px 10px 0px 10px;
+}
+
+/* ---- Cabecera ----------------------------------------------------------- */
+#cabecera #logo {
+    margin: 0;
+}
+
+/* ---- Menú --------------------------------------------------------------- */
+#menu {
+    background: #2a2d2f;
+    padding: 0;
+}
+
+#menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    padding: 8px 11px 4px;
+}
+
+#menu ul li a {
+    color: #e8e6e3;
+}
+
+#menu ul li:hover {
+    background: #1a1c1d;
+}
+
+/* ---- Contenidos --------------------------------------------------------- */
+#contenido .post {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 10px 30px;
+    margin: 5px 20px;
+}
+
+#contenido .post img {
+    height:min-content;
+    width: min-content;
+    margin-inline: auto;
+}
+
+#contenido .post h2 {
+    padding: 15px;
+    margin: 0 -20px;
+    color: #fff;
+    background: #0b0b0b;
+}
+
+#contenido #secundario h3 {
+    background: #2A2D2F;
+    color: #e8e6e3;
+    padding: 8px;
+}
+
+#contenido #secundario div {
+    min-width: 120px;
+}
+
+#contenido #secundario ul {
+    margin-left: 5px;
+}
+
+#contenido #secundario li.seleccionado a {
+    font-weight: bold;
+}
+
+/* ---- Movil -------------------------------------------------------------- */
+@media (max-width: 525px) {
+    #contenido {
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+    }
+
+    #contenido .post img {
+        max-width: 100%;
+        height: auto;
+        margin-inline: auto;
+    }
+
+    #contenido #secundario {
+        padding: 0 10px 10px 15px;
+        gap: 3px;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #contenido #secundario div {
+        min-width: 0px;
+        padding-left: 0px;
+    }
+    
+    #contenido #secundario ul {
+        padding-right: 20px;
+        margin: 0;
+    }
+    #contenido #secundario h3 {
+        padding: 3px;
+    }
+}
+
+/* ---- PC ----------------------------------------------------------------- */
+@media (min-width: 780px) {
+    #contenido #secundario div {
+        min-width: 200px;
+    }
+}
