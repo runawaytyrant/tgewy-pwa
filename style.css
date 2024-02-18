@@ -47,12 +47,6 @@ h3 {
     font-family: "Chakra Petch", sans-serif;
     font-weight: 300;
 }
-  
-ul, ol {
-    margin: 1em 0 1em 2em;
-    padding-left: 8px;
-    list-style: none;
-}
 
 /* ---- Layout ------------------------------------------------------------- */
 #contenedor, #cabecera, #contenido, #secundario {
@@ -68,6 +62,10 @@ ul, ol {
     height: 55px;
     padding: 10px 20px;
     background: #000;
+}
+
+#contenido, #contenido #principal {
+    flex-grow: 1;
 }
 
 #contenido #secundario {
@@ -89,6 +87,7 @@ ul, ol {
 
 #menu ul {
     display: flex;
+    list-style: none;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
@@ -116,9 +115,11 @@ ul, ol {
 }
 
 #contenido .post img {
-    height:min-content;
+    max-width: 100%;
     width: min-content;
     margin-inline: auto;
+    margin-top: 0.5em;
+    border-radius: 8px;
 }
 
 #contenido .post h2 {
@@ -126,6 +127,10 @@ ul, ol {
     margin: 0 -20px;
     color: #fff;
     background: #0b0b0b;
+}
+
+#contenido .post ul {
+    margin-top: -0.3em;
 }
 
 #contenido #secundario h3 {
@@ -139,15 +144,26 @@ ul, ol {
 }
 
 #contenido #secundario ul {
-    margin-left: 5px;
+    margin: 1em 0 1em 2em;
+    padding-left: 8px;
+    list-style: none;
 }
 
 #contenido #secundario li.seleccionado a {
     font-weight: bold;
 }
 
+#contenido #secundario #reportes li {
+    cursor: pointer;
+    color:#37bbf2;
+}
+
+#contenido #secundario #reportes li:hover {
+    color: #fff;
+}
+
 /* ---- Movil -------------------------------------------------------------- */
-@media (max-width: 525px) {
+@media (max-width: 535px) {
     #contenido {
         flex-direction: row;
         flex-wrap: wrap-reverse;
