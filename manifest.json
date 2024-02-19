@@ -1,0 +1,16 @@
+{
+    "name": "The World Ends With You 100%",
+    "short_name": "TWEWY 100%",
+    "description": "A Progressive Web App",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#181a1b",
+    "icons": [
+      {
+        "src": "img/favicon.ico",
+        "sizes": "16x16",
+        "type": "image/ico"
+      }
+    ]
+  }
+  
