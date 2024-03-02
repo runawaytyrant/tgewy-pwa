@@ -3,7 +3,7 @@
     "short_name": "TWEWY 100%",
     "description": "A Progressive Web App",
     "start_url": "./?utm_source=web_app_manifest",
-    "scope": "./",
+    "scope": "https://runawaytyrant.github.io/",
     "display": "standalone",
     "background_color": "#181a1b",
     "theme_color": "#131516",
